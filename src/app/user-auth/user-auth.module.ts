@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserAuthRoutingModule } from './user-auth-routing.module';
-// import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 
@@ -11,10 +11,10 @@ import { UserAuthRoutingModule } from './user-auth-routing.module';
   imports: [
     CommonModule,
     UserAuthRoutingModule,
-    // MatSlideToggleModule
+    MatSlideToggleModule
   ],
   exports: [
-    // MatSlideToggleModule
+    MatSlideToggleModule
   ]
 })
 export class UserAuthModule { }
