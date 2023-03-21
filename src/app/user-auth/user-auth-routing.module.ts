@@ -4,8 +4,15 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
+
+    // default redirect to here
+    { path: '', redirectTo: 'signup', pathMatch: 'full' },
+
     { path: 'login', component: LoginComponent },
-    { path: 'signup', component: SignUpComponent }
+    { path: 'signup', component: SignUpComponent },
+
+    // Invalid route --- if no path or URl is matched then redirect here
+    { path: '**', redirectTo: 'login' },
 ];
 
 @NgModule({

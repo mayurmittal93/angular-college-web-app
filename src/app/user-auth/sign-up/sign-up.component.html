@@ -1,1 +1,112 @@
 <h4>Welcome to Sign-Up</h4>
+
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="user-name">First name: </label>
+                <input id="user-name" type="text" class="form-control" placeholder="Enter First name"
+                    formControlName="firstName" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="user-name">Last name: </label>
+                <input id="user-name" type="text" class="form-control" placeholder="Enter Last name"
+                    formControlName="lastName" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="user-name">Email: </label>
+                <input id="user-name" type="email" class="form-control" placeholder="Enter email"
+                    formControlName="email" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="user-name">Mobile: </label>
+                <input id="user-name" type="number" class="form-control" placeholder="Enter Mobile number"
+                    formControlName="phoneNumber" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group"> </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input id="password" class="form-control" type="password" formControlName="password">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group"> </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" [disabled]="!signUpForm.valid">Submit</button>
+            </div>
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+    <!-- <div class="form-group">
+        <label for="user-name">Username: </label>
+        <input id="user-name" type="email" class="form-control form-control-sm" placeholder="Enter email"
+            formControlName="userName">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input id="password" class="form-control form-control-sm" type="password" formControlName="password">
+    </div> -->
+
+
+
+</form>

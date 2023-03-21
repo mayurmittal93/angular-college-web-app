@@ -1,20 +1,22 @@
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserAuthRoutingModule } from './user-auth-routing.module';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LoginComponent,
+    SignUpComponent
+  ],
   imports: [
     CommonModule,
     UserAuthRoutingModule,
-    MatSlideToggleModule
+    ReactiveFormsModule,
   ],
-  exports: [
-    MatSlideToggleModule
-  ]
+  exports: []
 })
 export class UserAuthModule { }

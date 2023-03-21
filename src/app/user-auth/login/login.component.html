@@ -1,3 +1,61 @@
 <p>Welcome to Login</p>
 
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group"> </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="user-name">Username: </label>
+                <input id="user-name" type="email" class="form-control" placeholder="Enter email"
+                    formControlName="userName" autocomplete="off">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group"> </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input id="password" class="form-control" type="password" formControlName="password">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group"> </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+            </div>
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+    <!-- <div class="form-group">
+        <label for="user-name">Username: </label>
+        <input id="user-name" type="email" class="form-control form-control-sm" placeholder="Enter email"
+            formControlName="userName">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input id="password" class="form-control form-control-sm" type="password" formControlName="password">
+    </div> -->
+
+
+
+</form>
