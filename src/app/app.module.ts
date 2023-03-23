@@ -11,14 +11,25 @@ import { CurriculamModule } from './curriculam/curriculam.module';
 import { DocumentsModule } from './documents/documents.module';
 import { ResultModule } from './result/result.module';
 import { UserAuthModule } from './user-auth/user-auth.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { GlobalService } from './services/global.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidenavComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     UserAuthModule,
     AttendanceModule,
@@ -27,7 +38,7 @@ import { UserAuthModule } from './user-auth/user-auth.module';
     CurriculamModule,
     AssignmentModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
