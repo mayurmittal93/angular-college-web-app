@@ -1,7 +1,7 @@
 <!-- <div class="content" role="main">
   <h2>Welcome to Apna College</h2>
 </div> -->
-<app-header></app-header>
+<app-header *ngIf="isUserLoggedIn"></app-header>
 <ul>
   <li>
     <a routerLink="login">Login</a>
@@ -12,4 +12,4 @@
 </ul>
 <!-- <app-dashboard></app-dashboard> -->
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="isUserLoggedIn"></app-footer>

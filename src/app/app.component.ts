@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserDetailsService } from './services/userDetails.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CollegeWebApp';
+  isUserLoggedIn!:boolean;
 
+  constructor(private userDetailsService:UserDetailsService){
+  }
+
+  ngOnInit(){
+    this.userDetailsService.isUserLoggedIn.subscribe(data=>{
+      this.isUserLoggedIn=data;
+    });
+  }
 
 
 }
