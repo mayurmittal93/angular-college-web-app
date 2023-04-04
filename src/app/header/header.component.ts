@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { UserDetailsService } from './../services/userDetailsService';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  constructor(private userDetailsService : UserDetailsService, private router : Router) {}
+
+  logout() {
+    this.userDetailsService.isUserLoggedIn.next(false);
+    this.router.navigate(['/login'])
+  }
 
 }
