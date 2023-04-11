@@ -16,7 +16,10 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GlobalService } from './services/global.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../app/corefolder/material.module';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
 
 
 @NgModule({
@@ -25,12 +28,14 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
-    DashboardComponent
+    DashboardComponent,
+    LeftMenuComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FlexLayoutModule,
     AppRoutingModule,
     UserAuthModule,
     AttendanceModule,
@@ -38,7 +43,13 @@ import { HttpClientModule } from '@angular/common/http'
     DocumentsModule,
     CurriculamModule,
     AssignmentModule,
+    MaterialModule,
+
+
     // ToastrModule.forRoot(),
+  ],
+  exports: [
+
   ],
   providers: [GlobalService],
   bootstrap: [AppComponent]

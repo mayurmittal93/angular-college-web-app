@@ -3,8 +3,8 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserAuthRoutingModule } from './user-auth-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../corefolder/material.module';
 
 
 @NgModule({
@@ -15,7 +15,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UserAuthRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
+    MaterialModule
   ],
   exports: []
 })

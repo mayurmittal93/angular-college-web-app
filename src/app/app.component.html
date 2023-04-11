@@ -2,7 +2,7 @@
   <h2>Welcome to Apna College</h2>
 </div> -->
 <app-header *ngIf="isUserLoggedIn"></app-header>
-<ul>
+<ul style="margin-left: 200px;">
   <li>
     <a routerLink="login">Login</a>
   </li>
@@ -10,6 +10,7 @@
     <a routerLink="signup">SignUp</a>
   </li>
 </ul>
-<!-- <app-dashboard></app-dashboard> -->
+
+<app-left-menu *ngIf="isUserLoggedIn"></app-left-menu>
 <router-outlet></router-outlet>
 <app-footer *ngIf="isUserLoggedIn"></app-footer>
