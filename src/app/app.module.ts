@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { ToastrModule } from ‘ngx - toastr’;
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,7 +46,7 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
     MaterialModule,
 
 
-    // ToastrModule.forRoot(),
+    ToastrModule.forRoot(),
   ],
   exports: [
 
