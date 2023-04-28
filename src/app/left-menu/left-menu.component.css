@@ -1,16 +1,9 @@
-.tp-container {
-    position: absolute;
-    top: 56px;
-    bottom: 50;
-    left: 0;
-    right: 0;
-    background: #eee;
+.main-container {
+    height: calc(100vh - 109px);
+    margin-top: 59px;
 }
 
-.tp-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: 30px;
-    width: 100px;
+.left-sidebar {
+    height: calc(100vh - 109px) !important;
+    overflow: auto;
 }

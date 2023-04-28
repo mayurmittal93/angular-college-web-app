@@ -1,15 +1,12 @@
-<!-- <div class="content" role="main">
-  <h2>Welcome to Apna College</h2>
-</div> -->
 <app-header *ngIf="isUserLoggedIn"></app-header>
-<ul style="margin-left: 200px; margin-top: 24px;">
+<!-- <ul style="margin-left: 200px; margin-top: 24px;">
   <li>
     <a routerLink="login">Login</a>
   </li>
   <li>
     <a routerLink="signup">SignUp</a>
   </li>
-</ul>
+</ul> -->
 
 <app-left-menu *ngIf="isUserLoggedIn"></app-left-menu>
 <router-outlet></router-outlet>

@@ -65,7 +65,8 @@
               "browserTarget": "CollegeWebApp:build:production"
             },
             "development": {
-              "browserTarget": "CollegeWebApp:build:development"
+              "browserTarget": "CollegeWebApp:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
